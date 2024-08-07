@@ -1,0 +1,72 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h3>Create a new listing</h3>
+    <form method="POST" action="/Listings" class="needs-validation" novalidate enctype="multipart/form-data" >
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" placeholder="enter your title" name="listing[title]" class="form-control" required>
+            <div class="valid-feedback">Looks goods!</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <textarea  placeholder="description" cols="30" rows="4" name="listing[description]" class="form-control" required></textarea>
+            <div class="invalid-feedback">You should be entered descriptio+n !</div>
+        </div>
+
+        <!-- <div class="mb-3">
+            <label for="image" class="form-label">image</label>
+            <input type="text" placeholder="enter your image url/link" name="listing[image]" class="form-control">
+            <div class="invalid-feedback">Entered valid image link!</div>
+        </div> -->
+        <div class="mb-4">
+            <label for="image" class="form-label">upload image</label>
+            <input type="file" name="listing[image]" class="form-control"/>
+            <div class="invalid-feedback">Entered valid image </div>
+           
+        </div>
+       
+        <div class="mb-3 col-4 ">
+            <select class="form-select" name="listing[category]" aria-label="Default select example">
+                <option selected>Select your category</option>
+                <option value="rooms">rooms</option>
+                <option value="treading">treading</option>
+                <option value="pools">pools</option>
+                <option value="Top citys">Top citys</option>
+                <option value="castles">castles</option>
+                <option value="arctic">arctic</option>
+                <option value="lake">lake</option>
+                <option value="mountain">mountain</option>
+                <option value="ski-in/out">Ski-in/out</option>
+                <option value="building">building</option>
+              </select>
+        </div>
+        
+        
+        <div class="row">
+            <div class="mb-3 col-4">
+                <label for="price" class="form-label">price</label>
+                <input placeholder="enter your price" name="listing[price]" class="form-control" required>
+                <div class="invalid-feedback">Entered valid price!</div>
+            </div>
+           
+            <div class="mb-3 col-8">
+                <label for="country" class="form-label">country</label>
+                <input type="text" placeholder="enter your country" name="listing[country]" class="form-control" required>
+                <div class="invalid-feedback">Enter country name!</div>
+            </div>
+        </div>
+        
+        
+        <div class="mb-3">
+            <label for="location" class="form-label">location</label>
+            <input type="text" placeholder="enter your location" name="listing[location]" class="form-control" required>
+            <div class="invalid-feedback">Enter location!</div>
+        </div>
+       
+        <button class="btn btn-dark add-btn">Add</button>
+        <br><br>
+    </form>
+</div>
+</div>
+
